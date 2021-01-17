@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+	<head>
+		<title><%= page.title %> - <%= config.title %></title>
+		<link rel="stylesheet" href="/boring.css" />
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<a href="/" id="logo">
+			<img src="/boring.svg" width="43" height="304" />
+		</a>
+		<div class="content">
+			<div class="post">
+				<h1><%= page.title %></h1>
+				<div class="article-date">by Alto Alexander, posted <%= page.date.format('MMMM Do YYYY, h:mm:ss a') %></div>
+				<%- page.content %>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+	<head>
+		<title><%= config.title %></title>
+		<link rel="stylesheet" href="/boring.css" />
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<a href="/" id="logo">
+			<img src="/boring.svg" width="43" height="304" />
+		</a>
+		<div class="content">
+			<div class="showcase">
+				<% for (const P of site.posts.toArray()) { %>
+					<a href="<%= url_for(P.path) %>" class="item">
+						<h1><%= P.title %></h1>
+						<div><%= P.excerpt %></div>
+					</a>
+				<% } %>
+			</div>
+		</div>
+	</body>
+</html>
